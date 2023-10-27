@@ -1,0 +1,23 @@
+{% extends 'base.html'%}
+
+{% block head %} 
+<title>Exchange rate updater</title>
+{%endblock%}
+
+{% block body %}
+<h3>Choose date range:</h3>
+
+<form method="post" action="{{ url_for('processing') }}">
+    <div class="mb-3">
+    <label for="dfrom">from:</label><br>
+    <input type="date" id="dfrom" name="update_from" value={{update_from}}>
+    </div>
+    <div class="mb-3">
+    <label for="dto">to:</label><br>
+    <input type="date" id="dto" name="update_to" value={{update_to}}>
+    </div>
+    <button type="submit" class="btn btn-primary">Update Google Sheets</button>
+</form>
+<hr> 
+
+ {%endblock%}

@@ -1,0 +1,12 @@
+{% extends 'base.html'%}
+
+{% block head %} 
+<title>Exchange rate updater</title>
+{%endblock%}
+
+{% block body %}
+<div class="mb-3"></div>
+<h3>Google Sheets have been successfully updated.</h3>
+<a class= "btn btn-primary" href="{{ url_for('enter_data') }}">Home</a>
+</div>
+ {%endblock%}
